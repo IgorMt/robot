@@ -23,9 +23,8 @@ Run: **..\robot\target>java -jar robot-1.0-SNAPSHOT.jar** to start the applicati
 
 The below text appears in the console:
 
-_Start Robot Play.
-
-Your first command: >_
+    Start Robot Play.
+    Your first command: >
 
 The Robot Simulator is ready to operate. Now use the following commands.
 
@@ -33,15 +32,15 @@ The Robot Simulator is ready to operate. Now use the following commands.
 
 Application can read commands of the following formats:
 
-_PLACE X,Y,F
+>PLACE X,Y,F
 
-MOVE
+>MOVE
 
-LEFT
+>LEFT
 
-RIGHT
+>RIGHT
 
-REPORT_
+>REPORT
 
 Command **PLACE** places the toy robot on the table in positions X,Y facing one of the four 
 directions: NORTH, SOUTH, EAST or WEST.
