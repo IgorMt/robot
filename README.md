@@ -12,7 +12,7 @@ should be prevented, but further valid movement commands must still be allowed.
     - Maven version: Apache Maven 3.5.3
 JDK and Maven of the above specified versions (or similar).
 
-#Getting Started
+##Getting Started
 
 Application Installation
 Copy robot.zip into executing folder and unpack it.
@@ -22,19 +22,19 @@ Run: '**mvn clean install**' to compile the application in \robot folder
 Run: **..\robot\target>java -jar robot-1.0-SNAPSHOT.jar** to start the application  
 
 The below text appears in the console:
->Start Robot Play.
->Your first command: >
+_Start Robot Play.
+Your first command: >_
 
 The Robot Simulator is ready to operate. Now use the following commands.
 
 #Robot commands
 
 Application can read commands of the following formats:
-> PLACE X,Y,F
-> MOVE
-> LEFT
-> RIGHT
-> REPORT
+_PLACE X,Y,F
+MOVE
+LEFT
+RIGHT
+REPORT_
 
 Command **PLACE** places the toy robot on the table in positions X,Y facing one of the four 
 directions: NORTH, SOUTH, EAST or WEST.
@@ -50,7 +50,7 @@ the position of the robot.
 **REPORT** - returns to the console information about the X,Y and the robot's orientation.
 **EXIT** - exits from the Robot Simulator.
 
-#Constraints:
+##Constraints:
 
 Any command that might lead the robot to falling from the table is ignored by the application.
 This also includes the initial placement of the robot. Error message will appear if 
@@ -65,25 +65,25 @@ Use the correct  X,Y range (0-4) to place the robot.
 The only directions that the robot must face are NORTH, SOUTH, EAST and WEST.
 Use correct Input and Output, e.g.:
  a)
->PLACE 0,0,NORTH
->MOVE
->REPORT
->Output: 0,1,NORTH
+_PLACE 0,0,NORTH
+MOVE
+REPORT
+Output: 0,1,NORTH_
 
  b)
->PLACE 0,0,NORTH
->LEFT
->REPORT
->Output: 0,0,WEST
+_PLACE 0,0,NORTH
+LEFT
+REPORT
+Output: 0,0,WEST_
 
  c)
->PLACE 1,2,EAST
->MOVE
->MOVE
->LEFT
->MOVE
->REPORT
->Output: 3,3,NORTH
+_PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+Output: 3,3,NORTH_
 
 #Running the tests
 
