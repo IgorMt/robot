@@ -1,4 +1,5 @@
 #Toy Robot Simulator
+
 The application is a simulation of a toy robot moving on a square tabletop. Its movements 
 are limited to the dimensions of 5 units x 5 units. The robot is free to move around the table, 
 but should be prevented from falling from it (falling means destruction). Any 
@@ -6,11 +7,13 @@ movement that might result in the robot falling from the table
 should be prevented, but further valid movement commands must still be allowed. 
 
 #Prerequisites
+
     - Java version: 1.8.0_162-b12
     - Maven version: Apache Maven 3.5.3
 JDK and Maven of the above specified versions (or similar).
 
 #Getting Started
+
 Application Installation
 Copy robot.zip into executing folder and unpack it.
 
@@ -25,6 +28,7 @@ The below text appears in the console:
 The Robot Simulator is ready to operate. Now use the following commands.
 
 #Robot commands
+
 Application can read commands of the following formats:
 > PLACE X,Y,F
 > MOVE
@@ -47,12 +51,14 @@ the position of the robot.
 **EXIT** - exits from the Robot Simulator.
 
 #Constraints:
+
 Any command that might lead the robot to falling from the table is ignored by the application.
 This also includes the initial placement of the robot. Error message will appear if 
 **PLACE** X,Y parameters are out of the range (0-4) or an incorrect format is used 
 (e.g., 0,@,NORTH instead of 0,0,NORTH). See below for examples.
 
 #How to work with the application
+
 Use all the letters in UPPERCASE only to operate the robot.
 Only **exit** can be entered in lowercase.
 Use the correct  X,Y range (0-4) to place the robot.
@@ -80,6 +86,7 @@ Use correct Input and Output, e.g.:
 >Output: 3,3,NORTH
 
 #Running the tests
+
 To run tests only, run '**mvn test**'in \robot folder 
 The JUnit tests cover the following basic functions:
 - calls for the main method to check if the application can be launched
@@ -91,5 +98,6 @@ The JUnit tests cover the following basic functions:
 - checks if the commands that lead the robot to fall are properly ignored
 
 #Author
+
 I. Maltsev
 30/06/2018
