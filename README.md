@@ -6,7 +6,7 @@ but should be prevented from falling from it (falling means destruction). Any
 movement that might result in the robot falling from the table 
 should be prevented, but further valid movement commands must still be allowed. 
 
-#Prerequisites
+##Prerequisites
 
     - Java version: 1.8.0_162-b12
     - Maven version: Apache Maven 3.5.3
@@ -22,7 +22,9 @@ Run: '**mvn clean install**' to compile the application in \robot folder
 Run: **..\robot\target>java -jar robot-1.0-SNAPSHOT.jar** to start the application  
 
 The below text appears in the console:
+
 _Start Robot Play.
+
 Your first command: >_
 
 The Robot Simulator is ready to operate. Now use the following commands.
@@ -30,10 +32,15 @@ The Robot Simulator is ready to operate. Now use the following commands.
 #Robot commands
 
 Application can read commands of the following formats:
+
 _PLACE X,Y,F
+
 MOVE
+
 LEFT
+
 RIGHT
+
 REPORT_
 
 Command **PLACE** places the toy robot on the table in positions X,Y facing one of the four 
@@ -45,9 +52,12 @@ Note: The first executed command has to be **PLACE**. If **PLACE** has not been 
 the application will ignore all other commands.
 
 **MOVE** - moves the toy robot by one unit forward in the direction it is facing.
+
 **LEFT** and **RIGHT** - rotate the robot 90 degrees in the specified direction without changing 
 the position of the robot.
+
 **REPORT** - returns to the console information about the X,Y and the robot's orientation.
+
 **EXIT** - exits from the Robot Simulator.
 
 ##Constraints:
@@ -64,28 +74,44 @@ Only **exit** can be entered in lowercase.
 Use the correct  X,Y range (0-4) to place the robot.
 The only directions that the robot must face are NORTH, SOUTH, EAST and WEST.
 Use correct Input and Output, e.g.:
+ 
  a)
-_PLACE 0,0,NORTH
-MOVE
-REPORT
-Output: 0,1,NORTH_
+
+>PLACE 0,0,NORTH
+
+>MOVE
+
+>REPORT
+
+>Output: 0,1,NORTH
 
  b)
-_PLACE 0,0,NORTH
-LEFT
-REPORT
-Output: 0,0,WEST_
+
+>PLACE 0,0,NORTH
+
+>LEFT
+
+>REPORT
+
+>Output: 0,0,WEST_
 
  c)
-_PLACE 1,2,EAST
-MOVE
-MOVE
-LEFT
-MOVE
-REPORT
-Output: 3,3,NORTH_
+ 
+>PLACE 1,2,EAST
 
-#Running the tests
+>MOVE
+
+>MOVE
+
+>LEFT
+
+>MOVE
+
+>REPORT
+
+>Output: 3,3,NORTH
+
+##Running the tests
 
 To run tests only, run '**mvn test**'in \robot folder 
 The JUnit tests cover the following basic functions:
@@ -97,7 +123,7 @@ The JUnit tests cover the following basic functions:
 - checks if the robot correctly follows the commands
 - checks if the commands that lead the robot to fall are properly ignored
 
-#Author
+##Author
 
 I. Maltsev
 30/06/2018
